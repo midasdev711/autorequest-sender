@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "Rigicapital Form Helper",
+    "description": "Extension to fill the form from json on rigicapital.com",
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "matches": [
+                "*://rigicapital.com/*",
+                "file:///Volumes/Workspace/workspace/misc/gc_extension/rigicapital/HTML_from_rigi_site.html",
+                "*://sellercentral.amazon.com/*"
+            ],
+            "js": ["content_script.js"]
+        }
+    ],
+    "background": {
+        "scripts": ["event_script.js"],
+        "persistent": false
+    },
+    "permissions": ["activeTab"],
+    "browser_action": {
+        "default_title": "Rigicapital Form Helper",
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"    
+    }
+}

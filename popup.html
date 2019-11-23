@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<script src="popup_script.js"></script>
+
+<style>
+    html {
+        height: 50px
+    }
+    body {
+        height: 50px;
+    }
+    #containter {
+        width: 300px;
+    }
+
+    #top {
+        float: left;
+        width: 200px;
+        margin-right: 20px;
+    }
+
+    #bottom {
+        float: left;
+        width: 500px;
+    }
+
+    #container::after {
+        clear: both;
+    }
+
+    .bottom {
+        text-align: center;
+    }
+    button {
+        margin: 10px;
+    }
+    #message {
+        color: red;
+    }
+</style>
+</head>
+<body>
+    <div id="container">
+        <div id="bottom">
+            <button id="save_btn">Request reviews</button>
+        </div>
+    </div>
+</body>
+</html>
